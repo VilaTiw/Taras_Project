@@ -1,0 +1,15 @@
+body {
+    color: black;
+    ;
+    font-family: 'Trebuchet MS', sans-serif;
+}
+
+.header_text {
+    padding: 1rem;
+    color: #6facfc;
+    text-align: center;
+}
+
+.title {
+    text-align: center;
+}
