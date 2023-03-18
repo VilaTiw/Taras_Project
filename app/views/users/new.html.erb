@@ -1,17 +1,19 @@
 <div class="header">
-  <p class="header_text">Hello</p>
+  <p class="header_text">Taras Rohulia</p>
 </div>
 <div class="wrapper">
   <div>
     <h3 class="title">Reg</h3>
-    <%= form_with model: @user do |form| %>
+    <%= form_with model: @user, data: {turbo: false} do |form| %>
       <p> <%= form.label :email %></p>
       <p><%= form.text_field :email%></p>
       <p> <%= form.label :password %></p>
       <p><%= form.password_field :password %></p>
+      <p> <%= form.label :password_confirmation %></p>
+      <p><%= form.password_field :password_confirmation %></p>
       <p><%= form.submit "Login" %></p>
     <% end %>
-    <p class="dha-account">Don't have an account? <a href="#">Create new</a></p>
+    <%# <p class="dha-account">Don't have an account? <a href="#">Create new</a></p>
     <div class="flex-grow bg bg-gray-300 h-0.5"></div>
     <div class="wapper">
       <div style="float:left; width: 34%;">
@@ -21,8 +23,16 @@
         <hr />
       </div>
       <p class=" log-with">Or Login with</p>
-    </div>
+    </div> %>
+    <% if @user.errors.any? %>
+      <% @user.errors.full_messages.each do |message| %>
+        <p class="text-red message-error"><%= message %></p>
+      <% end %>
+    <% end %>
   </div>
 </div>
 <div class="blue_bloc"></div>
+
+
+
 <div class="blue_bloc--1"></div>

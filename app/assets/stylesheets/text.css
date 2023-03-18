@@ -13,3 +13,7 @@ body {
 .title {
     text-align: center;
 }
+
+.text-red {
+    color: red;
+}

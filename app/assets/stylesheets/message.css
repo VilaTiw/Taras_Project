@@ -1,3 +1,8 @@
 .message {
     text-align: center;
+
+}
+
+.message-error {
+    font-size: 12px;
 }
