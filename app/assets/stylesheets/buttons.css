@@ -1,0 +1,23 @@
+.button {
+    border: 0;
+    border-radius: 3px;
+    color: #1e2329;
+
+}
+
+.reg-button {
+    padding: 8px 13px 7px;
+}
+
+.button-yellov {
+    background-color: #fbd448;
+}
+
+.button-yellov:hover {
+    background-color: #fcd95a;
+}
+
+.button-main {
+
+    padding: 12px 60px 7px 60px;
+}

@@ -1,13 +1,18 @@
-body {
-    color: black;
-    ;
+body,
+a {
     font-family: 'Trebuchet MS', sans-serif;
 }
 
-.header_text {
+a {
+    text-decoration: none;
+
+}
+
+.header-text {
     padding: 1rem;
-    color: #6facfc;
-    text-align: center;
+    color: #efb82d;
+    font-size: 20px;
+
 }
 
 .title {
@@ -16,4 +21,14 @@ body {
 
 .text-red {
     color: red;
+}
+
+.text-center {
+    text-align: auto;
+}
+
+.title-main {
+    margin-top: 126px;
+    margin-left: 100px;
+    font-size: 20px;
 }
