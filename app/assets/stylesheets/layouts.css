@@ -7,9 +7,9 @@ div {
 }
 
 body {
-    overflow-x: hidden;
-    overflow-y: hidden;
+
     background: #fafafa;
+
     /* mb delete */
 }
 
@@ -58,5 +58,55 @@ body {
 
 .main-section {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    margin-top: 126px;
+}
+
+.separator {
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+
+.separator::before,
+.separator::after {
+    content: '';
+    flex: 1;
+    border-bottom: 1px solid #eaecef;
+
+}
+
+.main-left-section {
+
+
+    margin-right: 100px;
+    font-size: 20px;
+}
+
+.reg-main-section {
+    max-width: 68.5%;
+}
+
+.separator:not(:empty)::before {
+    margin-right: .5em;
+}
+
+.separator:not(:empty)::after {
+    margin-left: .5em;
+}
+
+
+
+.main-bottom-section {
+    display: flex;
+    justify-content: space-around;
+    margin-right: 2rem;
+    margin-top: 4.375rem;
+    margin-bottom: 4.375rem;
+
+}
+
+.container {
+    width: 1400px;
+    margin: 0 auto;
 }

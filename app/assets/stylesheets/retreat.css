@@ -13,3 +13,7 @@
 .mt {
     margin-top: 100px;
 }
+
+.mt-sm {
+    margin-top: 2rem;
+}
