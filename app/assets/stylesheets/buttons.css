@@ -21,3 +21,12 @@
 
     padding: 15px 60px;
 }
+
+.login-button {
+    padding: 13px 165px;
+}
+
+.google-button {
+    background: #eaecef;
+    padding: 13px 165px;
+}

@@ -9,30 +9,22 @@
     <%= javascript_importmap_tags %>
   </head>
   <body>
-      <header class="header">
-        <%= link_to 'Taras Rohulya', root_path, class: "header-text" %>
-      
-        <div class="menu ml-lg">
-          <%= link_to 'Markest', markets_path, class: 'ml-sm menu-item' %>
-          <%= link_to 'About', about_index_path, class: 'ml-lg menu-item' %>
-        </div>
-
-        <div class="reg-log">
-          <% if current_user.present? %>
-            <%= content_tag 'span', "@#{current_user.email}", class: 'ml-lg' %>
-            <%= button_to 'Вийти', session_path, method: :delete,class: 'ml-lg' %>
-          <% else %>
-            <%= link_to 'Log In', new_session_path, class: 'menu-item ml-lg  button reg-button' %>
-            <%= link_to 'Register', new_user_path, class: ' ml-lg button button-yellov reg-button' %>
-          <% end %>
-        </div>
-      </header>
-
+    <header class="header">
+      <%= link_to 'Taras Rohulya', root_path, class: "header-text" %>
+      <div class="menu ml-lg">
+        <%= link_to 'Markest', markets_path, class: 'ml-sm menu-item' %>
+        <%= link_to 'About', about_index_path, class: 'ml-lg menu-item' %>
+      </div>
+      <div class="reg-log">
+        <% if current_user.present? %>
+          <%= content_tag 'span', "@#{current_user.email}", class: 'ml-lg' %>
+          <%= button_to 'Вийти', session_path, method: :delete,class: 'ml-lg' %>
+        <% else %>
+          <%= link_to 'Log In', new_session_path, class: 'menu-item ml-lg  button reg-button' %>
+          <%= link_to 'Register', new_user_path, class: ' ml-lg button button-yellov reg-button' %>
+        <% end %>
+      </div>
+    </header>
     <%= yield %>
-    <% if flash[:alert].present? %>
-      <p class="message"><%= flash[:alert] %></p>
-    <% elsif flash[:notice].present?%>
-      <p class="message"><%= flash[:notice] %></p>
-    <% end %>
   </body>
 </html>

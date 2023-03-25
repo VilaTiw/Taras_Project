@@ -6,3 +6,7 @@
 .message-error {
     font-size: 12px;
 }
+
+.message-alert {
+    color: #cd334d;
+}

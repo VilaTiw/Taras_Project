@@ -33,8 +33,12 @@ a {
 
 }
 
+.text-yellow {
+    color: #c89320;
+}
+
 .text-center {
-    text-align: auto;
+    text-align: center;
 }
 
 .text-sm {
@@ -47,4 +51,8 @@ a {
 
 .text-md {
     font-size: 18px;
+}
+
+.text-yellow:hover {
+    color: #fbd448;
 }

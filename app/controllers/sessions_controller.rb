@@ -10,7 +10,7 @@ class SessionsController < ApplicationController
       session[:user_id] = user.id
       redirect_to '/profiles'
     else 
-      flash.now[:alert] = 'Неправильний email або password'
+      flash.now[:alert] = 'Incorrect email address or password'
       render :new
     end
   end
