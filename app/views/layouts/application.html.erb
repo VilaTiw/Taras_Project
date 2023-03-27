@@ -20,7 +20,7 @@
           <%= content_tag 'span', "@#{current_user.email}", class: 'ml-lg' %>
           <%= button_to 'Вийти', session_path, method: :delete,class: 'ml-lg' %>
         <% else %>
-          <%= link_to 'Log In', new_session_path, class: 'menu-item ml-lg  button reg-button' %>
+          <%= link_to 'Log In', new_session_path, class: 'ml-lg  button reg-button' %>
           <%= link_to 'Register', new_user_path, class: ' ml-lg button button-yellov reg-button' %>
         <% end %>
       </div>
