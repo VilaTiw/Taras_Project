@@ -78,3 +78,9 @@ group :test do
 end
 
 gem "dockerfile-rails", ">= 1.2", :group => :development
+
+#auth
+gem "devise"
+gem 'omniauth-github', github: 'omniauth/omniauth-github', branch: 'master'
+gem "omniauth-rails_csrf_protection"
+gem 'omniauth-google-oauth2'

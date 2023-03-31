@@ -1,7 +1,7 @@
 <div class="container-sm">
   <div>
     <h2 class="title mt">Login</h2>
-    <%= form_with scope: :session, url: session_path, data: {turbo: false} do |form| %>
+    <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |form| %>
       <p class="very-mb-sm"> <%= form.label :email %></p>
       <p><%= form.text_field :email, class: 'form-text-field '%></p>
       <p class="very-mb-sm mt-sm"> <%= form.label :password %></p>
@@ -18,5 +18,6 @@
   <div class="very-mt-sm">
     <%= link_to 'google', root_path , class: 'button google-button text-md' %>
   </div>
-  <p class="mt-sm text-center"><%= link_to 'Create Account', new_user_path, class: 'text-yellow' %></p>
+  <p class="mt-sm text-center"><%= link_to 'Create Account', new_user_registration_path, class: 'text-yellow' %></p>
 </div>
+
