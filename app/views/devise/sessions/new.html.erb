@@ -16,7 +16,8 @@
     <p class="text-md text-gray">or</p>
   </div>
   <div class="very-mt-sm">
-    <%= link_to 'google', root_path , class: 'button google-button text-md' %>
+    <%= render "devise/shared/links" %>
+    <%#= link_to 'google', root_path , class: 'button google-button text-md' %>
   </div>
   <p class="mt-sm text-center"><%= link_to 'Create Account', new_user_registration_path, class: 'text-yellow' %></p>
 </div>

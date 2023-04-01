@@ -1,4 +1,4 @@
-# fly.toml file generated for taras-rails-app on 2023-03-22T10:37:09+02:00
+# fly.toml file generated for taras-rails-app on 2023-04-01T11:28:14+03:00
 
 app = "taras-rails-app"
 kill_signal = "SIGINT"
