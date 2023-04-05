@@ -17,9 +17,7 @@
     background-color: #fbd448;
 }
 
-.button-yellov:hover {
-    background-color: #fcd95a;
-}
+
 
 .button-main {
     padding: 15px 0px;
@@ -32,4 +30,22 @@
 .google-button {
     background: #eaecef;
     padding: 13px 0;
+}
+
+.telegram-button {
+    background-color: #0088CC;
+    padding: 13px 0;
+    color: #fff;
+}
+
+.github-button {
+    padding: 13px 0;
+    color: #fff;
+    background: #171515;
+}
+
+.mail-button {
+    padding: 13px 0;
+    color: #fff;
+    background: #5561fb;
 }
