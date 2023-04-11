@@ -1,6 +1,36 @@
-Markets
-
-<%= link_to do %>
-  <i class="fa fa-question">Hello</i>
-  <p>CI/CD TEST</p>
-<% end %>
+<%# <h2 class="text-center">Markets</h2>
+<div class="container-md">
+  <div class="flex-direction-row">
+    <div class="flex-item">
+      <p class="markets-item">+img Bitcoin</p>
+      <p class="markets-item">2000</p>
+      <p class="markets-item">23.29</p>
+      <p class="markets-item mark-last-item">1.26935</p>
+    </div>
+    <hr>
+    <div class="flex-item">
+      <p class="markets-item">+img Lido Staked Ether</p>
+      <p class="markets-item">200320</p>
+      <p class="markets-item">23.29090</p>
+      <p class="markets-item mark-last-item">1.26935</p>
+    </div>
+    <hr>
+  </div>
+</div> %>
+<h2 class="text-center">Markets Overview</h2>
+<div class="container-md">
+  <div class="flex-direction-row">
+    <% for item in @data %>
+      <div class="flex-item">
+        <p class="markets-item">
+          <img src="<%= item["image"]%>" class="icon">
+          <%= "#{item["name"]}"%>
+        </p>
+        <p class="markets-item"> <%= item["current_price"] %> $</p>
+        <p class="markets-item"><%= "#{item["price_change_24h"].round(5)}" %>$</p>
+        <p class="markets-item mark-last-item"><%= "#{item["price_change_percentage_24h"].round(4)}%" %></p>
+      </div>
+      <hr>
+    <% end %>
+  </div>
+</div>
