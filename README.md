@@ -1,24 +1,3 @@
-# README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+<a href="https://taras-rails-app.fly.dev/"><img src="URL">Taras version Binance :D</a> 
+A project as a university exam for "Web-tecnologies" class.Similar to Binance with some features. Project should has basic functions and features, algorithms which are similar or as an official Binance has too. Current project was developed only for practice interest.
