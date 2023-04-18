@@ -18,3 +18,5 @@ jobs:
       - uses: superfly/flyctl-actions/setup-flyctl@master
       
       - run: flyctl deploy --remote-only
+      
+      - run: flyctl ssh console -C "/app/bin/rails db:seed" 
