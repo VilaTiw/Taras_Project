@@ -139,8 +139,14 @@ body {
 .markets-item {
     width: 15rem;
     max-width: 15rem;
+    padding: 20px;
 }
 
 .mark-last-item {
     max-width: 4rem;
+}
+
+.markets-nav-bar {
+    background: #cfc9c9;
+    padding: 10px;
 }
