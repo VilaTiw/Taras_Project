@@ -20,6 +20,6 @@
 
 <%- if devise_mapping.omniauthable? %>
   <%- resource_class.omniauth_providers.each do |provider| %>
-    <%= button_to "Sign in with Google", omniauth_authorize_path(resource_name, provider), class: "button google-button text-md", data: { turbo: false } %>
+    <%= button_to fa_icon('google') + " Sign in with Google", omniauth_authorize_path(resource_name, provider), class: "button google-button text-md", data: { turbo: false } %>
   <% end %>
 <% end %>

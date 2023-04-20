@@ -15,7 +15,8 @@
           <p class="text-md text-gray">or continue with</p>
         </div>
         <div class="very-mt-sm">
-          <%= link_to 'google', root_path , class: 'button google-button text-md' %>
+          <%= button_to fa_icon('google') + " Sign in with Google", user_google_oauth2_omniauth_authorize_path, 
+          class: "button google-button text-md", data: { turbo: false } %>
         </div>
       </div>
     </div>
