@@ -124,21 +124,8 @@ body {
     justify-content: space-between;
 }
 
-.flex-direction-row {
-    flex-direction: row;
-}
-
-.flex-item {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    flex-basis: 50%;
-    /* єбанув ширину  на 50%*/
-}
-
 .markets-item {
-    width: 15rem;
-    max-width: 15rem;
+    width: 14rem;
     padding: 20px;
 }
 
@@ -147,6 +134,16 @@ body {
 }
 
 .markets-nav-bar {
-    background: #cfc9c9;
+    background: #ebe6e6;
     padding: 10px;
+    border-radius: 0.3rem;
+}
+
+.display-flex {
+    display: flex;
+}
+
+.center {
+    display: block;
+
 }

@@ -1,56 +1,26 @@
-<%# <h2 class="text-center">Markets</h2>
-<div class="container-md">
-  <div class="markets-nav-bar flex-direction-row very-mb-sm ">
-    <div class="flex-item">
-      <p>Name</p>
-      <p>Price</p>
-      <p>Change$</p>
-      <p>Change%</p>
-    </div>
-  </div>
-  <div class="flex-direction-row">
-    <div class="flex-item">
-      <p class="markets-item">+img Bitcoin</p>
-      <p class="markets-item">2000</p>
-      <p class="markets-item">23.29</p>
-      <p class="markets-item mark-last-item">1.26935</p>
-    </div>
-    <div class="separator">
-    </div>
-    <div class="flex-item">
-      <p class="markets-item">+img Lido Staked Ether</p>
-      <p class="markets-item">200320</p>
-      <p class="markets-item">23.29090</p>
-      <p class="markets-item mark-last-item">1.26935</p>
-    </div>
-    <div class="separator">
-    </div>
-  </div>
-</div> %>
 <h2 class="text-center">Markets Overview</h2>
 <div class="container-md">
-  <div class="markets-nav-bar flex-direction-row very-mb-sm ">
-    <div class="flex-item">
-      <p>Name</p>
-      <p>Price</p>
-      <p>Change$</p>
-      <p>Change%</p>
+  <div class="markets-nav-bar very-mb-sm ">
+    <div class="display-flex">
+      <p class="name"><%= sortable "name", 'Name', 'text-yellow' %></p>
+      <p class="price"><%= sortable "price", 'Price' , 'text-yellow' %></p>
+      <p class="change"><%= sortable "change_24h_d", 'Change $', 'text-yellow' %></p>
+      <p class="change2"><%= sortable "change_24h_p", 'Change %', 'text-yellow'%></p>
     </div>
   </div>
-  <div class="flex-direction-row">
+  <div class="">
     <% for item in @data %>
-      <div class="flex-item">
-        <p class="markets-item">
+      <div class="flex-space-between">
+        <div class="markets-item display-flex">
           <img src="<%= item["image"]%>" class="icon">
-          <%= item["name"]%>
-          <%= item["symbol"] %>
-        </p>
-        <p class="markets-item"> <%= item["current_price"] %> $</p>
-        <p class="markets-item"><%= item["price_change_24h"].round(5) %>$</p>
-        <p class="markets-item mark-last-item"><%= item["price_change_percentage_24h"].round(4) %></p>
+          <p class="table-mt ml-sm"><%= item["symbol"].upcase %></p>
+          <p class="coins-name ml-sm text-sm text-gray "><%= item["name"]%> </p>
+        </div>
+        <p class="markets-item table-mt"> <%= item["price"] %> $</p>
+        <p class="markets-item table-mt"><%= item["change_24h_d"].round(5) %>$</p>
+        <p class="markets-item mark-last-item table-mt"><%= item["change_24h_p"].round(4) %>%</p>
       </div>
       <hr>
     <% end %>
   </div>
 </div>
-<%# update db and good looking %>

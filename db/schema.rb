@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_04_17_135016) do
+ActiveRecord::Schema[7.0].define(version: 2023_04_23_085149) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -18,9 +18,9 @@ ActiveRecord::Schema[7.0].define(version: 2023_04_17_135016) do
     t.string "symbol"
     t.string "name"
     t.string "image"
-    t.float "current_price"
-    t.float "price_change_24h"
-    t.float "price_change_percentage_24h"
+    t.float "price"
+    t.float "change_24h_d"
+    t.float "change_24h_p"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
