@@ -17,9 +17,9 @@
           <p class="table-mt ml-sm"><%= item["symbol"].upcase %></p>
           <p class="coins-name ml-sm text-sm text-gray "><%= item["name"]%> </p>
         </div>
-        <p class="markets-item table-mt"> <%= item["price"] %> $</p>
-        <p class="markets-item table-mt"><%= item["change_24h_d"].round(5) %>$</p>
-        <p class="markets-item mark-last-item table-mt"><%= item["change_24h_p"].round(4) %>%</p>
+        <p class="markets-item table-mt <%= my_color_for(item.change_24h_p)%>"> <%= item["price"] %> $</p>
+        <p class="markets-item table-mt <%= my_color_for(item.change_24h_p)%>"><%= item["change_24h_d"].round(5) %>$</p>
+        <p class="markets-item mark-last-item table-mt <%= my_color_for(item.change_24h_p)%>"><%= item["change_24h_p"].round(4) %>%</p>
       </div>
       <hr>
     <% end %>

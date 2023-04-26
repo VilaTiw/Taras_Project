@@ -20,7 +20,11 @@ a {
 }
 
 .text-red {
-    color: red;
+    color: #cd334d;
+}
+
+.text-green {
+    color: #19a56f;
 }
 
 .text-gray {
