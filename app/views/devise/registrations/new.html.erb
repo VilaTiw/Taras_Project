@@ -11,14 +11,12 @@
       <% if flash[:alert].present? %>
         <p class="message message-alert mt-sm"><%= flash[:alert] %></p>
       <% end  %>
-      <p><%= form.submit "Create Personal Account", class: 'button button-yellov login-button text-md mt-sm' %></p>
-    <% end %>
-    <% if @user.errors.any? %>
-      <% @user.errors.full_messages.each do |message| %>
-        <p class="text-red message-error"><%= message %></p>
+      <% if @user.errors.any? %>
+        <% @user.errors.full_messages.each do |message| %>
+          <p class="text-red text-center very-mt-sm"><%= message %></p>
+        <% end %>
       <% end %>
+      <p><%= form.submit "Create Personal Account", class: 'button button-yellov login-button text-md mt-sm' %></p>
     <% end %>
   </div>
 </div>
-
-

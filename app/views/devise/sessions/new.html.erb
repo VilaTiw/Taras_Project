@@ -7,7 +7,7 @@
       <p class="very-mb-sm mt-sm"> <%= form.label :password %></p>
       <p class="very-mb-sm"><%= form.password_field :password, class: 'form-text-field' %></p>
       <% if flash[:alert].present? %>
-        <p class="message message-alert mt-sm"><%= flash[:alert] %></p>
+        <p class="text-center text-red mt-sm"><%= flash[:alert] %></p>
       <% end  %>
       <%= form.submit "Log In", class: 'button button-yellov login-button text-md mt-sm' %>
     <% end %>
@@ -21,4 +21,3 @@
   </div>
   <p class="mt-sm text-center"><%= link_to 'Create Account', new_user_registration_path, class: 'text-yellow' %></p>
 </div>
-
