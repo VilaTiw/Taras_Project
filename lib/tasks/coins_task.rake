@@ -2,7 +2,7 @@ namespace :coins_task do
   desc 'Updates coin price, price_change_24h in $ and price_change_percentage_24h in db'
 
   task update_info: :environment do
-    info = CoinInfoService.new.call
+    info = CoinInfoService.new.get_info
     
     info.each do |item|
       begin

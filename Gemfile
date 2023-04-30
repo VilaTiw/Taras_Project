@@ -88,3 +88,9 @@ gem "omniauth-rails_csrf_protection"
 # gem 'omniauth-github', github: 'omniauth/omniauth-github', branch: 'master'
 
 # gem 'omniauth-google-oauth2'
+gem "chartkick", "~> 5.0"
+
+gem "groupdate"
+
+
+gem 'chart-js-rails'

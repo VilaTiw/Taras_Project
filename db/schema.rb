@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_04_23_085149) do
+ActiveRecord::Schema[7.0].define(version: 2023_04_30_211120) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -23,6 +23,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_04_23_085149) do
     t.float "change_24h_p"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "coin_id"
   end
 
   create_table "profiles", force: :cascade do |t|
