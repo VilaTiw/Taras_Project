@@ -83,3 +83,12 @@ Will be updated:smile:
 <br>
 <br>
 :phone:<a href="https://t.me/TarasUK1 "> Telegram</a>
+<h2>Lab 3 Info</h2>
+<br>
+Connected sorting algorithm with frontend design, improved sorting algorithm in general.
+<br>
+Holovko Uaroslav: https://github.com/Lowckick/WebProgrammingProject;
+<br>
+Pull link: https://github.com/Tarasukk/Web/commit/225d33f565559583ec780bdf8ba847eee45fe1ca;
+
+
