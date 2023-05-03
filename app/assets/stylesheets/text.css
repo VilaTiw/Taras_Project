@@ -56,3 +56,11 @@ a {
 .text-md {
     font-size: 18px;
 }
+
+.fa-arrow-up {
+    color: #efb82d;
+}
+
+.fa {
+    font-size: 0.6rem;
+}

@@ -11,5 +11,17 @@ module ApplicationHelper
         elsif percent >= 1
           'text-green'
         end
-      end
+    end
+
+    def sort_direction_arrow(name)
+      if sort_direction == 'desc' && sort_column == name
+        content_tag :div do
+          concat fa_icon('arrow-up 10x')
+        end
+      elsif sort_direction == 'asc' && sort_column == name
+        content_tag :div do
+          concat fa_icon(' arrow-up rotate-180')
+        end
+      end 
+    end
 end

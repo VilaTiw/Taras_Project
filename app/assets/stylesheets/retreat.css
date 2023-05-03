@@ -39,13 +39,21 @@
 }
 
 .price {
-    margin-left: 18.7rem;
+    margin-left: 17.6rem;
 }
 
 .change {
-    margin-left: 19.7rem;
+    margin-left: 19.3rem;
 }
 
 .change2 {
-    margin-left: 17.5rem;
+    margin-left: 17.1rem;
 }
+
+.name,
+.price,
+.change,
+.change2 {
+    margin-right: 0.4rem;
+}
+
