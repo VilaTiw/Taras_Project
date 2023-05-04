@@ -57,10 +57,8 @@ a {
     font-size: 18px;
 }
 
-.fa-arrow-up {
+.fa-arrow-up,
+.fa-circle {
     color: #efb82d;
-}
-
-.fa {
     font-size: 0.6rem;
 }

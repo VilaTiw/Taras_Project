@@ -148,6 +148,11 @@ body {
     display: block;
 }
 
+.div-center {
+    margin: auto;
+    text-align: center;
+}
+
 .coin-row {
     padding: 4px;
 }

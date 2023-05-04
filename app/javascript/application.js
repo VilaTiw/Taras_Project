@@ -3,5 +3,5 @@ import "@hotwired/turbo-rails"
 import "controllers"
 import "chartkick"
 import "Chart.bundle"
-const Chart = require('chart.js')
+// import 'chart.js/auto';
 

@@ -22,6 +22,10 @@ module ApplicationHelper
         content_tag :div do
           concat fa_icon(' arrow-up rotate-180')
         end
-      end 
+      else
+        content_tag :div do
+          concat fa_icon('circle')
+        end
+      end
     end
 end
