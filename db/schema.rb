@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_04_30_211120) do
+ActiveRecord::Schema[7.0].define(version: 2023_05_06_194140) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -24,6 +24,18 @@ ActiveRecord::Schema[7.0].define(version: 2023_04_30_211120) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "coin_id"
+  end
+
+  create_table "investments", force: :cascade do |t|
+    t.integer "user_id"
+    t.string "coin_name"
+    t.float "shopping_price"
+    t.float "invest"
+    t.float "amount"
+    t.float "dollar_change"
+    t.float "percentage_change"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "profiles", force: :cascade do |t|

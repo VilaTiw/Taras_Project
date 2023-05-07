@@ -148,11 +148,16 @@ body {
     display: block;
 }
 
-.div-center {
-    margin: auto;
-    text-align: center;
-}
-
 .coin-row {
     padding: 4px;
+}
+
+.circle {
+    width: 200px;
+    height: 200px;
+    line-height: 200px;
+    border-radius: 50%;
+    font-size: 60px;
+    color: #fff;
+    background: #0088CC
 }

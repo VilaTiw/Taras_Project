@@ -1,0 +1,36 @@
+<div class="circle text-center div-center">
+  
+  <p class="mt">T</p>
+</div>
+
+<p class="text-center very-mt-sm"><%= @user.email %></p>
+<p class="text-center very-mt-sm"><%= @user.id %></p>
+
+<%= form_with(model: @investment, local: true) do |f| %>
+  <div class="form-group div-center">
+    <%= f.select :coin_name, Coin.pluck(:name), {},{data: {controller: 'slim'}}%>
+  </div>
+  <p class="very-mb-sm very-mt-sm"> <%= f.label :shopping_price %></p>
+  <p><%= f.text_field :shopping_price, class: 'form-text-field '%></p>
+
+  <p class="very-mb-sm very-mt-sm"> <%= f.label :invest %></p>
+  <p><%= f.text_field :invest, class: 'form-text-field'%></p>
+  
+  <div class="form-group very-mt-sm">
+    <%= f.submit class: "btn btn-primary" %>
+  </div>
+<% end %>
+
+<% for item in @investments %>
+  <% if current_user.id == item.user_id %>
+    <hr>
+    <p>Name:<%= item.coin_name %></p>
+    <p>Shoping price:<%= item.shopping_price %></p>
+    <p>Invest: <%= item.invest %></p>
+    <p>Amount: <%= item.amount %></p> 
+    <%# <%= test(item.dollar_change,item.shopping_price) %> 
+    <%= test(item.dollar_change) %>
+    <p>Percentagechange: <%= item.percentage_change %></p> 
+    <%= button_to fa_icon('trash-o'), investment_path(item.id) , method: :delete%>
+  <% end  %>
+<% end  %>

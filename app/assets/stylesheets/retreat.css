@@ -26,6 +26,11 @@
     margin-top: 1.5rem;
 }
 
+.div-center {
+    margin: auto;
+    text-align: center;
+}
+
 .table-mt {
     margin-top: 0.4rem;
 }

@@ -6,15 +6,18 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <link rel="stylesheet" href="https://unpkg.com/slim-select@latest/dist/slimselect.css" />
     <%= javascript_importmap_tags %>
   </head>
   <body>
     <header class="header">
       <%= link_to 'Taras Rohulya', root_path, class: "header-text" %>
       <div class="menu ml-lg">
-        <%= link_to 'Markest', coins_path, class: 'ml-sm menu-item' %>
+        <%= link_to 'Markets', coins_path, class: 'ml-sm menu-item' %>
         <%= link_to 'About', about_index_path, class: 'ml-lg menu-item' %>
         <%= link_to 'Users', users_path, class: 'ml-lg menu-item' %>
+        <%= link_to 'Calculator', investments_path, class: 'ml-lg menu-item' %>
+        
       </div>
       <div class="reg-log">
         <% if user_signed_in? %>

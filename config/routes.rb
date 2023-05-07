@@ -7,6 +7,6 @@ Rails.application.routes.draw do
   resources :main, only: %i[index]
   resources :about, only: %i[index]
   resources :coins, only: %i[index show]
-
+  resources :investments, only: %i[index create destroy]
   root to: 'main#index'
 end

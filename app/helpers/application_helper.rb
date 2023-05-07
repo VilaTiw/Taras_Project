@@ -28,4 +28,16 @@ module ApplicationHelper
         end
       end
     end
+
+    def test(price)
+      if price.present?
+        content_tag :p do
+          concat "Dolar change: #{price}"
+        end
+      else
+        content_tag :p do
+          concat 'Dolar change: No Data yet'
+        end
+      end
+    end
 end
