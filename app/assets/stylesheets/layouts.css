@@ -108,15 +108,23 @@ body {
     margin: 0 auto;
 }
 
-.container-sm {
+.container-sm,
+.container-md,
+.container-lg {
     margin-left: auto;
     margin-right: auto;
+
+}
+
+.container-sm {
     width: 378px;
 }
 
 .container-md {
-    margin-left: auto;
-    margin-right: auto;
+    width: 600px;
+}
+
+.container-lg {
     width: 1150px;
 }
 
@@ -153,11 +161,19 @@ body {
 }
 
 .circle {
-    width: 200px;
-    height: 200px;
-    line-height: 200px;
+    width: 150px;
+    height: 150px;
+    line-height: 150px;
     border-radius: 50%;
     font-size: 60px;
     color: #fff;
     background: #0088CC
+}
+
+.coins-frame {
+    /* box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 4px; */
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    border-radius: 1rem;
+    padding: 1rem;
+    position: relative;
 }

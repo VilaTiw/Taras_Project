@@ -1,36 +1,73 @@
-<div class="circle text-center div-center">
-  
-  <p class="mt">T</p>
-</div>
-
-<p class="text-center very-mt-sm"><%= @user.email %></p>
-<p class="text-center very-mt-sm"><%= @user.id %></p>
-
-<%= form_with(model: @investment, local: true) do |f| %>
-  <div class="form-group div-center">
-    <%= f.select :coin_name, Coin.pluck(:name), {},{data: {controller: 'slim'}}%>
+<div class="container-md">
+  <div class="circle div-center">
+    <p><%= current_user.email.chr.upcase %></p>
   </div>
-  <p class="very-mb-sm very-mt-sm"> <%= f.label :shopping_price %></p>
-  <p><%= f.text_field :shopping_price, class: 'form-text-field '%></p>
-
-  <p class="very-mb-sm very-mt-sm"> <%= f.label :invest %></p>
-  <p><%= f.text_field :invest, class: 'form-text-field'%></p>
-  
-  <div class="form-group very-mt-sm">
-    <%= f.submit class: "btn btn-primary" %>
+  <div class="flex-space-between div-center ">
+    <p class="mt text-34 <%= my_color_for(get_final_dolars(@investments)) %>">
+      $<%= get_final_dolars(@investments) %>
+    </p>
+    <p class="mt text-34 mr-md ">32110$</p>
+    <p class="mt text-34 <%= my_color_for(get_final_percents(@investments)) %>">
+      %<%= get_final_percents(@investments) %>
+    </p>
   </div>
-<% end %>
+  
+  <%# <p class="text-center very-mt-sm"><%= @user.email</p>  %>
+  <%# <p class="text-center very-mt-sm"><%= @user.id</p> %>
 
-<% for item in @investments %>
-  <% if current_user.id == item.user_id %>
-    <hr>
-    <p>Name:<%= item.coin_name %></p>
-    <p>Shoping price:<%= item.shopping_price %></p>
-    <p>Invest: <%= item.invest %></p>
-    <p>Amount: <%= item.amount %></p> 
-    <%# <%= test(item.dollar_change,item.shopping_price) %> 
-    <%= test(item.dollar_change) %>
-    <p>Percentagechange: <%= item.percentage_change %></p> 
-    <%= button_to fa_icon('trash-o'), investment_path(item.id) , method: :delete%>
+  <%= form_with(model: @investment, local: true) do |f| %>
+    <div class="mt-md">
+      <%= f.select :coin_name, Coin.pluck(:name), {include_blank: true},{data: {controller: 'slim'}}%>
+    </div>
+    <p class="very-mb-sm very-mt-sm text-center"> <%= f.label :shopping_price %></p>
+    <p class="text-center "><%= f.text_field :shopping_price, class: 'form-text-field'%></p>
+
+    <p class="very-mb-sm very-mt-sm text-center"> <%= f.label :invest %></p>
+    <p class="text-center"><%= f.text_field :invest, class: 'form-text-field'%></p>
+    
+    <div class="div-center very-mt-sm very-mb-sm">
+      <%= f.submit  '+', class: "text-20" %>
+    </div>
+    
+  <% end %>
+
+  <% @investments.each do |item| %>
+    <% if current_user.id == item.user_id %>
+      <div class="coins-frame mt-md display-flex very-mb-sm">
+        <div class="frame-center">
+          <img src="<%= Coin.find_by_name(item.coin_name).image %>" class="icon x">
+        </div>
+        
+        <div class="amount-invest">
+          <p>
+            <span class="text-orange"><%= Coin.find_by_name(item.coin_name).symbol.upcase %> </span>
+            <%= item.amount.round(4) %>
+          </p> 
+          
+          <p><%= item.invest %></p>
+          
+        </div>
+        
+        <div class="sh_price-curr_price">
+          <p><%= item.shopping_price %></p>
+          
+          <p>212112</p>
+        </div>
+
+        <div class="pch-dch">
+          <p class="<%= my_color_for(item.dollar_change) %>">
+            <%= item.dollar_change.round(2) %>
+          </p>
+          
+          <p class="<%= my_color_for(item.percentage_change) %>">
+            <%= item.percentage_change.round(2) %>%
+          </p> 
+        </div>
+        <div class="frame-center button-delete">
+          <%= button_to fa_icon('trash-o'), investment_path(item.id) , method: :delete,class:%>
+        </div>
+      </div>
+    <% end  %>
   <% end  %>
-<% end  %>
+
+</div>

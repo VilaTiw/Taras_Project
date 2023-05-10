@@ -1,6 +1,6 @@
 <h2 class="text-center">Markets Overview</h2>
 <h6 class="text-center"><%= @data[0].updated_at %></h6>
-<div class="container-md">
+<div class="container-lg">
   <div class="markets-nav-bar very-mb-sm ">
     <div class="display-flex">
 	  <p class="name"><%= sortable "name", "Name ", 'text-yellow' %></p>
@@ -14,7 +14,7 @@
     </div>
   </div>
   <div class="">
-    <% for item in @data %>
+    <% @data.each do |item| %>
       <a class="flex-space-between coin-row" href="coins/<%= item.id %>">
         <div class="markets-item display-flex">
           <img src="<%= item["image"]%>" class="icon">

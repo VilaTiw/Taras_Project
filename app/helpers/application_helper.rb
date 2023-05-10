@@ -5,10 +5,10 @@ module ApplicationHelper
         link_to title, { sort: column, direction: direction }, class: css_class
     end
 
-    def my_color_for(percent)
-        if percent <= -1
+    def my_color_for(num)
+        if num <= -1
           'text-red'
-        elsif percent >= 1
+        elsif num >= 1
           'text-green'
         end
     end
@@ -32,11 +32,11 @@ module ApplicationHelper
     def test(price)
       if price.present?
         content_tag :p do
-          concat "Dolar change: #{price}"
+          concat "$#{price.round(2)}"
         end
       else
         content_tag :p do
-          concat 'Dolar change: No Data yet'
+          concat 0
         end
       end
     end

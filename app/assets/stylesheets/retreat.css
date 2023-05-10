@@ -18,6 +18,10 @@
     margin-top: 2rem;
 }
 
+.mt-md {
+    margin-top: 1.5rem;
+}
+
 .very-mb-sm {
     margin-bottom: 0.5rem;
 }
@@ -27,7 +31,8 @@
 }
 
 .div-center {
-    margin: auto;
+    margin-left: auto;
+    margin-right: auto;
     text-align: center;
 }
 
@@ -60,4 +65,42 @@
 .change,
 .change2 {
     margin-right: 0.3rem;
+}
+
+.mr {
+    margin-right: 3rem;
+}
+
+.mr-md {
+    margin-right: 1.9rem;
+}
+
+.amount-invest {
+    margin-left: 0.5rem;
+
+}
+
+.sh_price-curr_price {
+
+    position: absolute;
+    left: 16.5rem;
+}
+
+.pch-dch {
+    position: absolute;
+    margin-left: 28rem;
+}
+
+.button-delete {
+    margin-left: 1rem;
+    position: absolute;
+    right: 1rem;
+    top: 1.5rem;
+
+
+}
+
+.frame-center {
+    margin-top: auto;
+    margin-bottom: auto;
 }

@@ -1,16 +1,16 @@
 namespace :investments_task do
 
-  desc 'Updates coin price, price_change_24h in $ and price_change_percentage_24h in db'
+  desc 'to do'
 
   task update_info: :environment do
     investments = Investment.all
     investments.each do |item|
-      puts item.coin_name
+      curr_price = Coin.find_by_name(item.coin_name).price
+      percent = percent_change(item.shopping_price,curr_price)
+      profit = add_percent(item.invest,percent)
       invest = Investment.find_by_id(item.id).update(
-        dollar_change: add_percent(item.invest,
-          percent_change(item.shopping_price,
-          Coin.find_by_name(item.coin_name).price)) - item.shopping_price,
-        percentage_change: percent_change(item.shopping_price, Coin.find_by_name(item.coin_name).price),
+        dollar_change: profit - item.invest,
+        percentage_change: percent_change(item.invest,profit), 
         updated_at: Time.now.strftime("%d/%m/%Y %H:%M")
       )
 
