@@ -1,5 +1,5 @@
 class Investment < ApplicationRecord
-  before_save :set_amount,:set_percentage_change
+  before_save :set_amount
 
   private
 
@@ -11,7 +11,5 @@ class Investment < ApplicationRecord
   #   self.dollar_change = 0
   # end
 
-  def set_percentage_change
-    self.percentage_change = 0
-  end
+  
 end

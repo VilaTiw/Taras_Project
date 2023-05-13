@@ -133,6 +133,11 @@ body {
     justify-content: space-between;
 }
 
+.flex-space-around {
+    display: flex;
+    justify-content: space-around;
+}
+
 .markets-item {
     width: 14rem;
     padding: 20px;

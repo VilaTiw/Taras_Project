@@ -26,6 +26,10 @@
     margin-bottom: 0.5rem;
 }
 
+.mb-md {
+    margin-bottom: 3rem;
+}
+
 .very-mt-sm {
     margin-top: 1.5rem;
 }
@@ -103,4 +107,12 @@
 .frame-center {
     margin-top: auto;
     margin-bottom: auto;
+}
+
+.frame-item {
+    margin-bottom: 0.5rem;
+}
+
+.user-padding {
+    padding: 1rem;
 }
