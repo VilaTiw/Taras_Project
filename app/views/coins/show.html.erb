@@ -1,0 +1,51 @@
+
+<div class="div-center text-center very-mt-sm">
+
+  <img src="<%= @coin.image %>" class="icon-show">
+    <h1 class="very-mt-sm"><%= @coin.name %></h1>
+</div>
+
+<div class="very-mt-sm">
+  <canvas id="test" c></canvas>
+</div>
+
+
+
+<script>
+  
+  
+  document.addEventListener("DOMContentLoaded", function() {
+  var coin_id = '<%= @coin.coin_id %>'
+  var coin_name = '<%= @coin.name %>'
+  
+  
+  fetch(`https://api.coingecko.com/api/v3/coins/${coin_id}/market_chart?vs_currency=usd&days=7 `)
+  .then(response => response.json())
+  .then(data => {
+    
+    var ctx = document.getElementById('test').getContext('2d');
+    
+    var myChart = new Chart(ctx, {
+      type: 'line',
+      data: {
+        labels: data.prices.map(price => new Date(price[0]).toLocaleString('en-US', { month: 'long', day: 'numeric' })),
+        datasets: [{
+          label: `${coin_name} Price`,
+          data: data.prices.map(price => price[1]),
+          backgroundColor: 'rgba(75, 192, 192, 0.2)',
+          borderColor: 'rgba(75, 192, 192, 1)',
+          borderWidth: 1,
+          fill:true
+        }]
+      }
+    });
+  });
+  
+  });
+  if(!localStorage.getItem('is_reloaded')) {
+    localStorage.setItem('is_reloaded', true);
+    location.reload();
+  } else {
+    localStorage.removeItem('is_reloaded');
+  }
+</script>
